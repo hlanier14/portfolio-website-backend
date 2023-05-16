@@ -2,11 +2,13 @@ const { SecretManagerServiceClient } = require('@google-cloud/secret-manager');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
 const port = parseInt(process.env.PORT) || 8080;
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
