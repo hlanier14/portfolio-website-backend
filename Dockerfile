@@ -17,9 +17,9 @@ RUN npm install --only=production
 COPY . ./
 
 ENV PORT=8080
-ENV FROM_EMAIL=projects/784309172112/secrets/contact-me-from-email/latest
-ENV FROM_EMAIL_PASSWORD=projects/784309172112/secrets/contact-me-from-email-password/latest
-ENV TO_EMAIL=projects/784309172112/secrets/contact-me-to-email/latest
+ENV FROM_EMAIL=projects/784309172112/secrets/contact-me-from-email/versions/latest
+ENV FROM_EMAIL_PASSWORD=projects/784309172112/secrets/contact-me-from-email-password/versions/latest
+ENV TO_EMAIL=projects/784309172112/secrets/contact-me-to-email/versions/latest
 
 # Run the web service on container startup.
 CMD [ "node", "index.js" ]
